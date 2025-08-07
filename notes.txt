@@ -1,0 +1,63 @@
+pip install virtualenv
+python -m venv venv07082025
+.\venv07082025\Scripts\activate
+
+pip install -r requirements.txt
+
+
+pip install django
+python -m django --version
+django-admin startproject GROCERY .
+
+python manage.py startapp main
+
+python manage.py makemigrations
+python manage.py migrate
+                                                      python manage.py runserver
+python manage.py collectstatic
+pip freeze > requirements.txt
+
+python manage.py makemigrations
+python manage.py migrate
+
+git reset --hard HEAD
+SHIFT + F5 for hard reset
+heroku logs --tail --app online-grocery       #to see what heroku is actully doing
+heroku logs --tail --app your-app-name
+
+
+C:\Users\hull\OneDrive\Desktop\task\Eternal_Glow\db.sqlite3
+
+python manage.py dumpdata treatment.Product --output products.json --indent 4
+
+
+***************************************************************************************************
+From the terminal, check the location of your django-allauth package files on your computer. Copy the file path labelled Location: You will need this in the next step.
+
+    pip3 show django-allauth
+
+        Location: C:\Users\hull\OneDrive\Desktop\task\Eternal_Glow\glow\Lib\site-packages
+
+Copy the allauth template files to the projects templates directory using this terminal command where <Location> is the file path you copied in the previous step.
+
+    cp -r <Location>/allauth/templates/* ./templates/
+
+This banner is required as the file structure differs if you use the ci-full-template.
+***************************************************************************************************
+
+
+fontawesome
+google.font
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+SECRET KEY FOR HEROKU  run command: python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+
+https://www.facebook.com/profile.php?id=61566332712590
+
+After the alert message disappears, the empty <div> or container remains, causing a blank space in your layout.
+implement:
+Alert messages are only rendered when they exist.
+When an alert message is dismissed or automatically disappears, it's removed from the DOM.
+
+
